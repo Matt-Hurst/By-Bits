@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { loginController, getPolicyController } = require("./controller");
 
-router.get("/", loggerMiddleWare, getPolicyController);
-router.post("/login", loggerMiddleWare, loginController);
+router.get("/", getPolicyController);
+router.post("/login", loginController);
 
 module.exports = router;
