@@ -39,7 +39,7 @@ const Login = ({ setUserPolicy }) => {
           <h3>User Name:</h3>
           <input type="text" name="username" value={username} onChange={handleUserChange}/>
           <h3>Password:</h3>
-          <input type="password" name="password" value={password} onChange={handlePasswordChange}/>
+          <input type="password" name="password" value={password} onChange={handlePasswordChange} data-testid='password-input'/>
           <div  className="login-page-grand-wrapper__form-container__button-container">
             <button>Sign in</button>
           </div>
