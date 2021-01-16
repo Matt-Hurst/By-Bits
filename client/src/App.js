@@ -7,17 +7,16 @@ import { getUserPolicy } from "./apiService";
 
 const App = () => {
   const [userPolicy, setUserPolicy] = useState();
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const checkIfLoggedIn = async () => {
-    setLoading(true)
+    setLoading(true);
     const result = await getUserPolicy();
     if (result === "Unauthenticated") {
-      setLoading(false) 
+      setLoading(false);
       return;
-    }
-    else {
-      setLoading(false)
+    } else {
+      setLoading(false);
       setUserPolicy(result);
     }
   };

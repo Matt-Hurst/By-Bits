@@ -27,13 +27,18 @@ exports.loginController = async (req, res) => {
         },
       }
     );
-    res.status(200).cookie('access_token', data.access_token, { maxAge: (1000 * 60 * 15) , SameSite: "http://localhost:3001"} ).send(axiosResult.data);
+    res
+      .status(200)
+      .cookie("access_token", data.access_token, {
+        maxAge: 1000 * 60 * 15,
+        SameSite: "http://localhost:3001",
+      })
+      .send(axiosResult.data);
   } catch (error) {
     console.error(error);
     res.status(403).send({ msg: "Username or password incorrect" });
   }
 };
-
 
 exports.getPolicyController = async (req, res) => {
   try {
