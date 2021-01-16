@@ -1,0 +1,12 @@
+@import '../../App.scss';
+
+.policy-page-grand-wrapper {
+  h1 {
+    @include h1;
+    width: 70vw;
+  }
+
+  h3 {
+    margin: 3rem 0 0.5rem 0;
+  }
+}

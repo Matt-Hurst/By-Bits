@@ -28,11 +28,9 @@ const Login = ({ setUserPolicy }) => {
   }
 
   return (
-    <div>
-      <header>
-        <h1>Sign In</h1>
-      </header>
-      <div>
+    <div className="login-page-grand-wrapper">
+      <h1>Sign In</h1>
+      <div className="login-page-grand-wrapper__form-container">
         <form onSubmit={(e) => {
           if (!password || !username) e.preventDefault()  
           else handleSubmit(e)
@@ -42,7 +40,7 @@ const Login = ({ setUserPolicy }) => {
           <input type="text" name="username" value={username} onChange={handleUserChange}/>
           <h3>Password:</h3>
           <input type="password" name="password" value={password} onChange={handlePasswordChange}/>
-          <div>
+          <div  className="login-page-grand-wrapper__form-container__button-container">
             <button>Sign in</button>
           </div>
         </form>

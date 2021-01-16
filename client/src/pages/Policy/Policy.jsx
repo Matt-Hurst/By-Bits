@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './Policy.scss'
 
 const Policy = ({userPolicy}) => {
 
@@ -10,7 +11,7 @@ const Policy = ({userPolicy}) => {
   }
 
   return (
-    <div>
+    <div className="policy-page-grand-wrapper">
       <h1>
         My Policy
       </h1>

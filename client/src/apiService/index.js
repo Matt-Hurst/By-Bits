@@ -6,11 +6,16 @@ export const userLogin = async (username, password) => {
   const { data } = await axios.post(`${URL}login`, {
     username,
     password,
+  }, {
+    withCredentials: true
   });
   return data;
 };
 
 export const getUserPolicy = async () => {
-  const { data } = await axios(`${URL}`);
+  const { data } = await axios(`${URL}`, {
+      withCredentials: true
+    }
+  );
   return data;
 };
