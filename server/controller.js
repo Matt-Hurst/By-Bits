@@ -32,10 +32,10 @@ exports.loginController = async (req, res) => {
       .cookie('access_token', data.access_token, {
         maxAge: 1000 * 60 * 15,
         SameSite: 'http://localhost:3001',
+        secure: process.env.NODE_ENV ? true : false,
       })
       .send(axiosResult.data);
   } catch (error) {
-    console.error(error);
     res.status(403).send({ msg: 'Username or password incorrect' });
   }
 };
@@ -56,6 +56,6 @@ exports.getPolicyController = async (req, res) => {
     );
     res.send(axiosResult.data);
   } catch (error) {
-    res.send('Unauthenticated');
+    res.send({ msg: 'Unauthenticated' });
   }
 };
