@@ -26,7 +26,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App" data-testid='app-container'>
       {loading && <h1>LOADING...</h1>}
       {!userPolicy && !loading && <LoginPage setUserPolicy={setUserPolicy} />}
       {userPolicy && !loading && <PolicyPage userPolicy={userPolicy} />}
