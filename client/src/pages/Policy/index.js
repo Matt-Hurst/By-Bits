@@ -1,3 +1,3 @@
-import PolicyPage from "./Policy";
+import PolicyPage from './Policy';
 
 export { PolicyPage };

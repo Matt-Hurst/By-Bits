@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./Policy.scss";
+import './Policy.scss';
 
 const Policy = ({ userPolicy }) => {
   const { policy, vehicle } = userPolicy;
@@ -18,7 +18,7 @@ const Policy = ({ userPolicy }) => {
       <p>{policy.cover}</p>
       <h3>Car</h3>
       <p>
-        {capitalize(vehicle.make)} {capitalize(vehicle.model)}{" "}
+        {capitalize(vehicle.make)} {capitalize(vehicle.model)}{' '}
         {capitalize(vehicle.colour)} -{vehicle.reg}
       </p>
       <h3>Address</h3>

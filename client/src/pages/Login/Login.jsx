@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { userLogin } from "../../apiService";
-import "./Login.scss";
+import React, { useState } from 'react';
+import { userLogin } from '../../apiService';
+import './Login.scss';
 
 const Login = ({ setUserPolicy }) => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleUserChange = (e) => {
     setUsername(e.target.value);
@@ -18,8 +18,8 @@ const Login = ({ setUserPolicy }) => {
     e.preventDefault();
     try {
       const result = await userLogin(username, password);
-      setUsername("");
-      setPassword("");
+      setUsername('');
+      setPassword('');
       setUserPolicy(result);
     } catch (error) {
       console.error(error);

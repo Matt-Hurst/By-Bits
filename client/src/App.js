@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { LoginPage } from "./pages/Login";
-import { PolicyPage } from "./pages/Policy";
+import React, { useEffect, useState } from 'react';
+import { LoginPage } from './pages/Login';
+import { PolicyPage } from './pages/Policy';
 
-import "./App.scss";
-import { getUserPolicy } from "./apiService";
+import './App.scss';
+import { getUserPolicy } from './apiService';
 
 const App = () => {
   const [userPolicy, setUserPolicy] = useState();
@@ -12,7 +12,7 @@ const App = () => {
   const checkIfLoggedIn = async () => {
     setLoading(true);
     const result = await getUserPolicy();
-    if (result === "Unauthenticated") {
+    if (result === 'Unauthenticated') {
       setLoading(false);
       return;
     } else {
@@ -26,7 +26,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App" data-testid='app-container'>
+    <div className="App" data-testid="app-container">
       {loading && <h1>LOADING...</h1>}
       {!userPolicy && !loading && <LoginPage setUserPolicy={setUserPolicy} />}
       {userPolicy && !loading && <PolicyPage userPolicy={userPolicy} />}
