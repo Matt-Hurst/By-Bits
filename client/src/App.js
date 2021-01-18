@@ -12,7 +12,7 @@ const App = () => {
   const checkIfLoggedIn = async () => {
     setLoading(true);
     const result = await getUserPolicy();
-    if (result === 'Unauthenticated') {
+    if (result.msg === 'Unauthenticated') {
       setLoading(false);
       return;
     } else {
