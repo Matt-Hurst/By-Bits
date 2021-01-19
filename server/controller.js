@@ -31,7 +31,7 @@ exports.loginController = async (req, res) => {
       .status(200)
       .cookie('access_token', data.access_token, {
         maxAge: 1000 * 60 * 15,
-        SameSite: 'http://localhost:3001',
+        sameSite: 'Strict',
         secure: process.env.NODE_ENV ? true : false,
       })
       .send(axiosResult.data);
