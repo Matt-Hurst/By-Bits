@@ -1,4 +1,4 @@
-export const mockUserPolicy = {
+exports.mockUserPolicy = {
   policy: {
     policy_ref: '12345',
     cover: 'Comprehensive',

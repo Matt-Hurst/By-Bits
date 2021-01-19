@@ -7,16 +7,12 @@ import { getUserPolicy } from './apiService';
 
 const App = () => {
   const [userPolicy, setUserPolicy] = useState();
-  const [loading, setLoading] = useState(false);
 
   const checkIfLoggedIn = async () => {
-    setLoading(true);
     const result = await getUserPolicy();
     if (result.msg === 'Unauthenticated') {
-      setLoading(false);
       return;
     } else {
-      setLoading(false);
       setUserPolicy(result);
     }
   };
@@ -27,9 +23,8 @@ const App = () => {
 
   return (
     <div className="App" data-testid="app-container">
-      {loading && <h1>LOADING...</h1>}
-      {!userPolicy && !loading && <LoginPage setUserPolicy={setUserPolicy} />}
-      {userPolicy && !loading && <PolicyPage userPolicy={userPolicy} />}
+      {!userPolicy && <LoginPage setUserPolicy={setUserPolicy} />}
+      {userPolicy && <PolicyPage userPolicy={userPolicy} />}
     </div>
   );
 };
