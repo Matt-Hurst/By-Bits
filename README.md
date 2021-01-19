@@ -26,12 +26,15 @@ git clone https://github.com/Matt-Hurst/By-Bits.git
 cd By-Bits
 ```
 
-2. Install dependecies
+2. Install dependecies in root, client, and server
 
 ```
+Root:
+npm install
+Client:
 cd client
 npm install
-cd ..
+Server:
 cd server
 npm install
 ```
