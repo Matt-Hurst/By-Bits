@@ -3,6 +3,7 @@ const axios = require('axios');
 exports.loginController = async (req, res) => {
   try {
     const { password, username } = req.body;
+    if (!password || !username) throw new Error();
     const { data } = await axios.post(
       'https://api.bybits.co.uk/auth/token',
       {
