@@ -14,8 +14,8 @@
 
 ### Estimated time spent
 
-- Research: 3 hours
-- Build: 3 hours
+- Research: 4 hours
+- Build: 4 hours
 
 # Getting Started
 
