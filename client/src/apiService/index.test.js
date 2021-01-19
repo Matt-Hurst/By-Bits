@@ -1,6 +1,6 @@
 import { getUserPolicy, userLogin } from './index';
 import moxios from 'moxios';
-import { mockUserPolicy } from '../mocks';
+import { mockUserPolicy } from '../../../mocks';
 
 describe('Api Service', () => {
   beforeEach(() => {
