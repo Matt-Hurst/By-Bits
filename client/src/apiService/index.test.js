@@ -36,14 +36,15 @@ describe('Api Service', () => {
     expect(result).toEqual(mockUserPolicy);
   });
   it('Should not return a users policy when getUserPolicy api is called without access_token on cookie', async () => {
+    const data = { msg: 'Unauthenticated' };
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
         status: 200,
-        response: 'Unauthenticated',
+        response: data,
       });
     });
     const result = await getUserPolicy();
-    expect(result).toEqual('Unauthenticated');
+    expect(result).toEqual(data);
   });
 });
