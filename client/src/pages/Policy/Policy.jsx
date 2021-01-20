@@ -2,12 +2,12 @@ import React from 'react';
 
 import './Policy.scss';
 
+export const capitalize = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
+
 const Policy = ({ userPolicy }) => {
   const { policy, vehicle } = userPolicy;
-
-  const capitalize = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
 
   return (
     <div className="policy-page-grand-wrapper">
